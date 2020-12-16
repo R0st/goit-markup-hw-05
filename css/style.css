@@ -188,9 +188,15 @@ a {
  }
 
   .auth-nav .link {
-  color: var(--primary-text-color);
+  color: var(--primary-text-color); 
 }
- 
+.auth-nav .link,
+.auth-nav .envelope-icon,
+.auth-nav .vector-icon {
+  transition-duration: 250ms;
+  transition-delay: var(--timing-function);
+}
+
  .auth-nav .link:hover .envelope-icon,
  .auth-nav .link:focus .envelope-icon,
  .auth-nav .link:hover .vector-icon,
@@ -552,30 +558,6 @@ a {
   margin-bottom: 94px;
 }  */
 
-/* .instagram {
-  background-image: url("/images/decoration/instagram.svg");
-}
-.twitter {
-  background-image: url("/images/decoration/twitter.svg");
-}
-.facebook {
-  background-image: url("/images/decoration/facebook.svg");
-}
-.linkedin {
-  background-image: url("/images/decoration/linkedin.svg");
-}
-.instagram:hover,
-.instagram:focus,
-.twitter:hover,
-.instagram:focus,
-.facebook:hover,
-.instagram:focus,
-.linkedin:hover,
-.instagram:focus {
-  background-color: var(--accent-color);
-  border-radius: 50%;
-} */
-
 /* clients */
 .static-clients {
   padding-top: 94px;
@@ -598,8 +580,7 @@ a {
   width: 170px;
   height: 90px;
   align-items: center;
-  justify-content: center;
-  
+  justify-content: center; 
 }
 .client:last-child {
   margin-right: 0;
@@ -610,12 +591,18 @@ a {
 
 .client:hover .logo,
 .client:focus .logo  {
-  fill: var(--accent-color)
+  fill: var(--accent-color);
+  transition-duration: 250ms;
+  transition-delay: var(--timing-function);
 }
+
 
   .client:hover,
   .client:focus {
   border-color: var(--accent-color);
+  transition-duration: 250ms;
+  transition-delay: var(--timing-function);
+
 }
 
  /* footer */

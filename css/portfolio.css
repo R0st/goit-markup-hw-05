@@ -183,6 +183,12 @@
   .auth-nav .link {
   color: var(--primary-text-color);
 }
+.auth-nav .link,
+.auth-nav .envelope-icon,
+.auth-nav .vector-icon {
+  transition-duration: 250ms;
+  transition-delay: var(--timing-function);
+}
  
  .auth-nav .link:hover .envelope-icon,
  .auth-nav .link:focus .envelope-icon,
@@ -261,17 +267,15 @@
    border-right: 1px solid var(--portfolio-item);
    border-bottom: 1px solid var(--portfolio-item);
   }
-  
-  .projects-link {
+  .projects-overlay {
     position: relative;
-  }
-  .projects-link {
     overflow: hidden;
+
   }
  .projects-text {
    display: inline-block;
-   align-items: center;
-   justify-content: center;
+   position: absolute;
+   
    font-family: Roboto;
    font-style: normal;
    font-weight: normal;
@@ -280,16 +284,21 @@
    letter-spacing: 0.03em;
    padding: 63px 24px;
    color: var(--white-color);
-   position: absolute;
-   top: 0;
+   
+   bottom: 0;
    left: 0;
-   background: rgba(33, 150, 243, 0.9);
-   transform: translateY(150%);
+   transform: translateY(100%);
+   background-color: rgba(33, 150, 243, 0.9);
    transition: transform 250ms var(--timing-function);
  }
- .projects-link:hover .projects-text {
-   transform: translateY(0);
+ .overlay {
+   position: relative;
  }
+
+ .projects-link:hover .projects-text {
+  transform: translateY(0);
+ }
+
     
 
    /* calc((100% - кол-во маржинов в строке*значение маржина)/кол-во элементов в строке */
@@ -422,15 +431,3 @@
   background-color: var(--accent-color);
 }
 
-/* псевдоэлемент в картинке */
-.product-thumb::before {
-  display: inline-block;
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color:rgba(255,165,0,0.2);
-  outline: 1px solid green;
-}
