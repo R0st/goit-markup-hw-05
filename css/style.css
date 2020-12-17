@@ -463,10 +463,14 @@ a {
 
  
  /* наша команда */
+ .bcg-our-team {
+   background-color: var(--bcg-our-team);
+ }
  .container.our-team {
   background-color: var(--bcg-our-team);
   padding-top: 94px;
   padding-bottom: 94px;
+
  }
  .team-list {
   background-color: var(--white-color);
